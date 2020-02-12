@@ -8,6 +8,8 @@
     <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Precious Metals Calculator</title>
 </head>
@@ -22,18 +24,25 @@
                         <span class="blue-text text-darken-2 card-title">Gold Price</span>
                     </div>
                     <div class="card-action">
-                        <span id="goldText">$1000</span>
+                        <span id="goldText"></span>
+                    </div>
+                    <div class="card-action">
+                        <span>Last Updated:</span>
+                        <span id="goldTimeText"></span>
                     </div>
                 </blockquote>
             </div>
-
             <div class="col s3">
                 <blockquote class="card">
                     <div class="card-content">
                         <span class="blue-text text-darken-2 card-title">Silver Price</span>
                     </div>
                     <div class="card-action">
-                        <span id="silverText">$1000</span>
+                        <span id="silverText"></span>
+                    </div>
+                    <div class="card-action">
+                        <span>Last Updated:</span>
+                        <span id="silverTimeText"></span>
                     </div>
                 </blockquote>
             </div>
@@ -43,7 +52,11 @@
                         <span class="blue-text text-darken-2 card-title">Platinum Price</span>
                     </div>
                     <div class="card-action">
-                        <span id="platinumText">$1000</span>
+                        <span id="platinumText"></span>
+                    </div>
+                    <div class="card-action">
+                        <span>Last Updated:</span>
+                        <span id="platinumTimeText"></span>
                     </div>
                 </blockquote>
             </div>
@@ -53,20 +66,19 @@
                         <span class="blue-text text-darken-2 card-title">Palladium Price</span>
                     </div>
                     <div class="card-action">
-                        <span id="palladiumText">$1000</span>
+                        <span id="palladiumText"></span>
+                    </div>
+                    <div class="card-action">
+                        <span>Last Updated:</span>
+                        <span id="palladiumTimeText"></span>
                     </div>
                 </blockquote>
             </div>
-
-
-
-
             <div class="row">
                 <form name="calculator">
-                    <h2>Calculator</h2>
                     <span>Weight:</span>
                     <div class="row input-field inline">
-                        <div class="col s8"><input id="weight" name="weight" size="6">
+                        <div class="col s8"><input id="weight" value='1' name="weight" size="6">
                         </div>
                     </div>
                     <div class="row">
@@ -77,35 +89,34 @@
                             <div class="row medium-collapse">
                                 <div class="col s6">
                                     <p>
-                                    <label>
-                                        <input name="units" type="radio" checked value="1"/>
-                                        <span for='units'>Gram</span>
-                                    </label>
+                                        <label>
+                                            <input name="units" type="radio" checked value="1" />
+                                            <span for='units'>Gram</span>
+                                        </label>
                                     </p>
                                     <p>
-                                    <label>
-                                        <input name="units" type="radio" checked value="2"/>
-                                        <span>Pounds</span>
-                                    </label>
+                                        <label>
+                                            <input name="units" type="radio" value="2" />
+                                            <span>Pounds</span>
+                                        </label>
                                     </p>
                                     <p>
-                                    <label>
-                                        <input name="units" type="radio" checked value="3"/>
-                                        <span>Dwt</span>
-                                    </label>
+                                        <label>
+                                            <input name="units" type="radio" value="3" />
+                                            <span>Dwt</span>
+                                        </label>
                                     </p>
                                 </div>
-                                
                                 <div class="col s6">
                                     <p>
                                         <label>
-                                            <input name="units" type="radio" checked value="4"/>
+                                            <input name="units" type="radio" value="4" />
                                             <span>Troy Ounce</span>
                                         </label>
-                                        </p>
-                                        <p>
+                                    </p>
+                                    <p>
                                         <label>
-                                            <input name="units" type="radio" checked checked value="5"/>
+                                            <input name="units" type="radio" value="5" />
                                             <span>Av Ounce</span>
                                         </label>
                                     </p>
@@ -122,101 +133,111 @@
                                 <div class="col s6">
                                     <p>Gold</p>
                                     <p>
-                                    <label>
-                                        <input name="metal" type="radio" checked checked value="0"/>
-                                        <span>9K Gold</span>
-                                    </label>
+                                        <label>
+                                            <input name="metal" type="radio" checked value="0" />
+                                            <span>9K Gold</span>
+                                        </label>
                                     </p>
                                     <p>
-                                    <label>
-                                        <input name="metal" type="radio" value="1"/>
-                                        <span>10K Gold</span>
-                                    </label>
+                                        <label>
+                                            <input name="metal" type="radio" value="1" />
+                                            <span>10K Gold</span>
+                                        </label>
                                     </p>
                                     <p>
-                                    <label>
-                                        <input name="metal" type="radio" checked value="2"/>
-                                        <span>14K Gold</span>
-                                    </label>
+                                        <label>
+                                            <input name="metal" type="radio" value="2" />
+                                            <span>14K Gold</span>
+                                        </label>
                                     </p>
                                     <p>
-                                    <label>
-                                        <input name="metal" type="radio" value="3"/>
-                                        <span>18K Gold</span>
-                                    </label>
+                                        <label>
+                                            <input name="metal" type="radio" value="3" />
+                                            <span>18K Gold</span>
+                                        </label>
                                     </p>
                                     <p>
-                                    <label>
-                                        <input name="metal" type="radio" checked value="4"/>
-                                        <span>22K Gold</span>
-                                    </label>
+                                        <label>
+                                            <input name="metal" type="radio" value="4" />
+                                            <span>22K Gold</span>
+                                        </label>
                                     </p>
                                     <p>
-                                    <label>
-                                        <input name="metal" type="radio" checked value="5"/>
-                                        <span>24K Gold</span>
-                                    </label>
+                                        <label>
+                                            <input name="metal" type="radio" value="5" />
+                                            <span>24K Gold</span>
+                                        </label>
                                     </p>
                                 </div>
                                 <div class="col s6">
                                     <p>Silver</p>
                                     <p>
                                         <label>
-                                            <input name="metal" type="radio" value="6"/>
+                                            <input name="metal" type="radio" value="6" />
                                             <span>0.800 Silver</span>
                                         </label>
-                                        </p>
-                                        <p>
+                                    </p>
+                                    <p>
                                         <label>
-                                            <input name="metal" type="radio" checked value="7"/>
+                                            <input name="metal" type="radio" value="7" />
                                             <span>0.925 Silver</span>
                                         </label>
-                                        </p>
-                                        <p>
+                                    </p>
+                                    <p>
                                         <label>
-                                            <input name="metal" type="radio" checked value="9"/>
+                                            <input name="metal" type="radio" value="8" />
                                             <span>0.999 Silver</span>
                                         </label>
-                                        </p>
+                                    </p>
+                                    <p>&nbsp;</p>
+                                    <p>
+                                        <label>
+                                            <input name="metal" type="radio" value="9" />
+                                            <span>Platinum</span>
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="metal" type="radio" value="10" />
+                                            <span>Palladium</span>
+                                        </label>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row price">
-                        <div class="col s5">
-                            Price /Troy Oz (pure):
-                        </div>
-                        <div class="col s7"><input id="price" name="price" type="text">&nbsp;<a
-                                href="http://money.cnn.com/data/commodities/" target="_blank">Gold Prices | Silver
-                                Prices</a></div>
-                    </div>
-                    <div class="row">
-                        <div class="col s8"><input class="btn calc-btn calcBtn" name="sub" type="button"
-                                value="Calculate Value"></div>
-                        <div class="col s4">
-                            <div id="thevalue" class="value">$0.00<span class="warning">*</span></div>
-                        </div>
-                    </div>
-                </form>
             </div>
+            <div class="row">
+                <div class="col s8"><input class="btn calc-btn calcBtn" name="sub" type="button"
+                        value="Calculate Value"></div>
+                <div class="col s4">
+                    <div id="thevalue" class="value">$0.00<span class="warning">*</span></div>
+                </div>
+            </div>
+            </form>
         </div>
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets\js\Calculator.js"></script>
+    <script src="assets/js/currency.js.js"></script>
+    <script src="assets/js/calculator.js"></script>
     <!-- <script src="https://kit.fontawesome.com/385ee6e559.js"></script> -->
-    <!-- <script src='https://momentjs.com/downloads/moment.min.js'></script> -->
+    <script src='https://momentjs.com/downloads/moment.min.js'></script>
     <script src="https://dvasquez4155.github.io/api/JSON.js"></script>
     <script src="assets/js/script.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="assets/js/materialize.min.js"></script>
     <script>
-        var goldText = $("#goldPrice");
+        var goldText = $("#goldText");
+        var goldTimeText = $("#goldTimeText");
         var silverText = $("#silverText");
+        var silverTimeText = $("#silverTimeText");
         var platinumText = $("#platinumText");
+        var platinumTimeText = $("#platinumTimeText");
         var palladiumText = $("#palladiumText");
+        var palladiumTimeText = $("#palladiumTimeText");
     </script>
-</body>
 </body>
 
 </html>
