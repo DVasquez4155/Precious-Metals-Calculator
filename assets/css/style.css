@@ -1,9 +1,10 @@
-.card-title {
+.card-title, .card-action > span{
     text-align: center;
 }
 body {
     background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png');
 }
-/* .card {
-    background-color: lightgoldenrodyellow;
-} */
+.card {
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    background-color: whitesmoke;
+}
