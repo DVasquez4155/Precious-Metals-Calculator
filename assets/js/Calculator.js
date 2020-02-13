@@ -1,7 +1,8 @@
 $(document).ready(function() {
-  $('input[name="sub"]').on("click", function() {
+  $('input').on("change", function() {
     figureThis();
   });
+  figureThis();
 });
 
 function figureThis() {
