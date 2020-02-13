@@ -28,11 +28,11 @@
 //         {
 //             url : "https://finnhub.io/api/v1/forex/candle",
 //             api : "?token=" + "bovg3ufrh5r90eafk9s0",
-//             query : "&symbol=OANDA:XAU_USD&resolution=5" + "&from="  + moment().subtract(10, 'minute').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+//             query : "&symbol=OANDA:XAU_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
 //             cors : true,
 //             result : function (response) {
 //                 $(response).each(function(i){
-//                      console.log(moment(parseInt(response.t[i] + "000")))
+//                     console.log(moment(parseInt(response.t[i] + "000")))
 //                 })
 //                 console.log(response)
 //             }
