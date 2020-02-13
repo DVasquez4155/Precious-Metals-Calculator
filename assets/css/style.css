@@ -1,9 +1,37 @@
 .card-title {
-    text-align: center;
+  text-align: center;
+  color: #1f3d0c;
+  font-weight: bold;
 }
+
 body {
-    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png');
+  background-image: url(https://media.istockphoto.com/vectors/abstract-geometric-pattern-seamless-with-gold-luxury-line-and-white-vector-id1066178664);
 }
 /* .card {
     background-color: lightgoldenrodyellow;
 } */
+
+.card {
+  background-color: #d2b48c;
+  color: #57471e;
+  font-weight: bold;
+}
+
+.card-action {
+  color: #654321;
+  font-weight: bold;
+}
+
+#radio {
+  color: #654321;
+}
+*,
+*:before,
+*:after {
+  color: #654321;
+}
+
+.card-content {
+  color: #1f3d0c;
+  font-weight: bold;
+}
