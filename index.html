@@ -16,10 +16,9 @@
 
 <body>
     <div class="container">
-        <h4>Precious Metals Calculator</h4>
         <div class="row">
             <div class="col s3">
-                <blockquote class="card">
+                <div class="card">
                     <div class="card-content">
                         <span class="blue-text text-darken-2 card-title">Gold Price</span>
                     </div>
@@ -30,10 +29,10 @@
                         <span>Last Updated:</span>
                         <span id="goldTimeText"></span>
                     </div>
-                </blockquote>
+                </div>
             </div>
             <div class="col s3">
-                <blockquote class="card">
+                <div class="card">
                     <div class="card-content">
                         <span class="blue-text text-darken-2 card-title">Silver Price</span>
                     </div>
@@ -44,10 +43,10 @@
                         <span>Last Updated:</span>
                         <span id="silverTimeText"></span>
                     </div>
-                </blockquote>
+                </div>
             </div>
             <div class="col s3">
-                <blockquote class="card">
+                <div class="card">
                     <div class="card-content">
                         <span class="blue-text text-darken-2 card-title">Platinum Price</span>
                     </div>
@@ -58,10 +57,10 @@
                         <span>Last Updated:</span>
                         <span id="platinumTimeText"></span>
                     </div>
-                </blockquote>
+                </div>
             </div>
             <div class="col s3">
-                <blockquote class="card">
+                <div class="card">
                     <div class="card-content">
                         <span class="blue-text text-darken-2 card-title">Palladium Price</span>
                     </div>
@@ -72,66 +71,65 @@
                         <span>Last Updated:</span>
                         <span id="palladiumTimeText"></span>
                     </div>
-                </blockquote>
+                </div>
             </div>
-            <div class="row">
-                <form name="calculator">
-                    <span>Weight:</span>
-                    <div class="row input-field inline">
-                        <div class="col s8"><input id="weight" value='1' name="weight" size="6">
+            <form name="calculator">
+                <div class="col s3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="blue-text text-darken-2 card-title">Weight</span>
+                        </div>
+                        <div class="card-action">
+                            <input id="weight" value='1' name="weight" size="6">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col s4">
-                            <span class="title">Units:</span>
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="blue-text text-darken-2 card-title">Units</span>
                         </div>
-                        <div class="col s8">
-                            <div class="row medium-collapse">
-                                <div class="col s6">
-                                    <p>
-                                        <label>
-                                            <input name="units" type="radio" checked value="1" />
-                                            <span for='units'>Gram</span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                            <input name="units" type="radio" value="2" />
-                                            <span>Pounds</span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                            <input name="units" type="radio" value="3" />
-                                            <span>Dwt</span>
-                                        </label>
-                                    </p>
-                                </div>
-                                <div class="col s6">
-                                    <p>
-                                        <label>
-                                            <input name="units" type="radio" value="4" />
-                                            <span>Troy Ounce</span>
-                                        </label>
-                                    </p>
-                                    <p>
-                                        <label>
-                                            <input name="units" type="radio" value="5" />
-                                            <span>Av Ounce</span>
-                                        </label>
-                                    </p>
-                                </div>
-                            </div>
+                        
+                        <div class="card-action">
+                            <p>
+                                <label>
+                                    <input name="units" type="radio" checked value="1" />
+                                    <span for='units'>Gram</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="units" type="radio" value="2" />
+                                    <span>Pounds</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="units" type="radio" value="3" />
+                                    <span>Dwt</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="units" type="radio" value="4" />
+                                    <span>Troy Ounce</span>
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    <input name="units" type="radio" value="5" />
+                                    <span>Av Ounce</span>
+                                </label>
+                            </p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col s4">
-                            <p class="title">Metal:</p>
-                        </div>
-                        <div class="col s8">
-                            <div class="row medium-collapse">
-                                <div class="col s6">
-                                    <p>Gold</p>
+                </div>
+                <div class="col s9">
+                    <div class="card">
+                        <div class="row medium-collapse">
+                            <div class="col s3">
+                                <div class="card-content">
+                                    <span class="blue-text text-darken-2 card-title">Gold</span>
+                                </div>
+                                <div class="card-action">
                                     <p>
                                         <label>
                                             <input name="metal" type="radio" checked value="0" />
@@ -169,8 +167,12 @@
                                         </label>
                                     </p>
                                 </div>
-                                <div class="col s6">
-                                    <p>Silver</p>
+                            </div>
+                            <div class="col s3">
+                                <div class="card-content">
+                                    <span class="blue-text text-darken-2 card-title">Silver</span>
+                                </div>
+                                <div class="card-action">
                                     <p>
                                         <label>
                                             <input name="metal" type="radio" value="6" />
@@ -189,38 +191,51 @@
                                             <span>0.999 Silver</span>
                                         </label>
                                     </p>
-                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                            <div class="col s3">
+                                <div class="card-content">
+                                    <span class="blue-text text-darken-2 card-title">Platinum</span>
+                                </div>
+                                <div class="card-action">
                                     <p>
                                         <label>
                                             <input name="metal" type="radio" value="9" />
-                                            <span>Platinum</span>
+                                            <span>0.999 Platinum</span>
                                         </label>
                                     </p>
+                                </div>
+                            </div>
+                            <div class="col s3">
+                                <div class="card-content">
+                                    <span class="blue-text text-darken-2 card-title">Palladium</span>
+                                </div>
+                                
+                                <div class="card-action">
                                     <p>
                                         <label>
                                             <input name="metal" type="radio" value="10" />
-                                            <span>Palladium</span>
+                                            <span>0.999 Palladium</span>
                                         </label>
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </div>
-            <div class="row">
-                <div class="col s8"><input class="btn calc-btn calcBtn" name="sub" type="button"
-                        value="Calculate Value"></div>
-                <div class="col s4">
-                    <div id="thevalue" class="value">$0.00<span class="warning">*</span></div>
                 </div>
-            </div>
+                <div class="col s9">
+                    <div class="card">
+                        <div class="card-content">
+                            <span id="thevalue" class="blue-text text-darken-2 card-title">$0.00</span>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/currency.js.js"></script>
+    <script src="assets/js/currency.js"></script>
     <script src="assets/js/calculator.js"></script>
     <!-- <script src="https://kit.fontawesome.com/385ee6e559.js"></script> -->
     <script src='https://momentjs.com/downloads/moment.min.js'></script>
