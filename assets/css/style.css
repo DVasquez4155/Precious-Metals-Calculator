@@ -11,12 +11,6 @@ body {
     background-color: lightgoldenrodyellow;
 } */
 
-.card {
-  background-color: #d2b48c;
-  color: #57471e;
-  font-weight: bold;
-}
-
 .card-action {
   color: #654321;
   font-weight: bold;
@@ -33,18 +27,16 @@ body {
 
 .card-content {
   color: #1f3d0c;
-  font-weight: bold;
-
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png");
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-  background-color: transparent;
   width: 204px;
   height: 187px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  background-color: #d2b48c;
+  color: #57471e;
 }
 
 /* This container is needed to position the front and back side */
@@ -60,6 +52,7 @@ body {
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  background-color: #ebddcb;
 }
 
 /* Position the front and back side */
@@ -70,21 +63,21 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  background-color: #d2b48c;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  background-color: #d2b48c;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
-  color: white;
+  background-color: #d2b48c;
   transform: rotateY(180deg);
 }
 .card {
   box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
-  background-color: whitesmoke;
+  background-color: #d2b48c;
+  color: #57471e;
 }
