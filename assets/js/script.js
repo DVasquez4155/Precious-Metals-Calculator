@@ -1,26 +1,26 @@
-// var liveRates = new JSON({
-//   url: "https://www.live-rates.com/rates",
-//   api: "?key=" + "bc6cdd4bb0",
-//   result: function(response) {
-//     $(response).each(function(data) {
-//       var price = formatCurrency(response[data].rate);
-//       var timeSince = moment(parseInt(response[data].timestamp)).calendar();
-//       if (response[data].currency == "GOLD") {
-//         goldText.html(price);
-//         goldTimeText.html(timeSince);
-//       } else if (response[data].currency == "SILVER") {
-//         silverText.html(price);
-//         silverTimeText.html(timeSince);
-//       } else if (response[data].currency == "PLATINUM") {
-//         platinumText.html(price);
-//         platinumTimeText.html(timeSince);
-//       } else if (response[data].currency == "PALLADIUM") {
-//         palladiumText.html(price);
-//         palladiumTimeText.html(timeSince);
-//       }
-//     });
-//   }
-// });
+var liveRates = new JSON({
+  url: "https://www.live-rates.com/rates",
+  api: "?key=" + "bc6cdd4bb0",
+  result: function(response) {
+    $(response).each(function(data) {
+      var price = formatCurrency(response[data].rate);
+      var timeSince = moment(parseInt(response[data].timestamp)).calendar();
+      if (response[data].currency == "GOLD") {
+        goldText.html(price);
+        goldTimeText.html(timeSince);
+      } else if (response[data].currency == "SILVER") {
+        silverText.html(price);
+        silverTimeText.html(timeSince);
+      } else if (response[data].currency == "PLATINUM") {
+        platinumText.html(price);
+        platinumTimeText.html(timeSince);
+      } else if (response[data].currency == "PALLADIUM") {
+        palladiumText.html(price);
+        palladiumTimeText.html(timeSince);
+      }
+    });
+  }
+});
 
 // var alphavantage = new JSON(
 //         {
