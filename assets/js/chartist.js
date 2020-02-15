@@ -28,12 +28,12 @@ function newGraph(container,values) {
         },
         axisX: {
             labelInterpolationFnc: function (value) {
-                return '';
+                return value;
             }
         },
         axisY: {
             labelInterpolationFnc: function (value) {
-                return '';
+                return value;
             }
         },
         showArea: true,

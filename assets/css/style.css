@@ -1,4 +1,3 @@
-
 .card-title {
   text-align: center;
   color: #1f3d0c;
@@ -11,12 +10,6 @@ body {
 /* .card {
     background-color: lightgoldenrodyellow;
 } */
-
-.card {
-  background-color: #d2b48c;
-  color: #57471e;
-  font-weight: bold;
-}
 
 .card-action {
   color: #654321;
@@ -31,61 +24,85 @@ body {
 *:after {
   color: #654321;
 }
+.title {
 
-.card-content {
+  font-weight: bolder;
+  font-size: xx-large;
   color: #1f3d0c;
-  font-weight: bold;
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png");
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  background-color: transparent;
-  width: 204px;
-  height: 187px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
   text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+.card-title {
+  /* background-color: bisque; */
+  
+  
+  /* background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png"); */
 }
-
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
+.side, .card {
+  
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  background-color: #d2b48c;
+  color: #57471e;
+}
+.flipCard {
+  -webkit-perspective: 800;
+  -ms-perspective: 800;
+  -moz-perspective: 800;
+  -o-perspective: 800;
+  height: 200px;
+  position: relative;
+  margin: 50px auto;
+}
+.flipCard .card.flipped {
+  transform: rotatey(-180deg);
+  -ms-transform: rotatey(-180deg); /* IE 9 */
+  -moz-transform: rotatey(-180deg); /* Firefox */
+  -webkit-transform: rotatey(-180deg); /* Safari and Chrome */
+  -o-transform: rotatey(-180deg); /* Opera */
+}
+.flipCard .card {
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 0.5s;
+  -ms-transform-style: preserve-3d;
+  -ms-transition: 0.5s;
+  -o-transform-style: preserve-3d;
+  -o-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+.flipCard .card .side {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 2;
+  backface-visibility: hidden; /* W3C */
+  -webkit-backface-visibility: hidden; /* Safari & Chrome */
+  -moz-backface-visibility: hidden; /* Firefox */
+  -ms-backface-visibility: hidden; /* Internet Explorer */
+  -o-backface-visibility: hidden; /* Opera */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+.flipCard .card .back {
+  transform: rotatey(-180deg);
+  -ms-transform: rotatey(-180deg); /* IE 9 */
+  -moz-transform: rotatey(-180deg); /* Firefox */
+  -webkit-transform: rotatey(-180deg); /* Safari and Chrome */
+  -o-transform: rotatey(-180deg); /* Opera */
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
+.flipCard .card .front {
+  text-align: center;
 }
-
-/* Style the back side */
-.flip-card-back {
-  background-color: #bbb;
-  transform: rotateY(180deg);
-}
-.card {
-    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    background-color: whitesmoke;
+.flipCard .card .back {
+  text-align: center;
+  padding-top: 50px;
+  font-family: Georgia;
+  font-size: 2em;
 }
 .ct-chart {
   background-color: #bbb;
