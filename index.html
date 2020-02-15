@@ -18,18 +18,15 @@
     <div class="container">
         <div class="row">
             <div class="col s3 flip-card">
-                    <div class="flip-card-inner card">
+                    <div class="flip-card-inner ">
                         <div class="flip-card-front">
                             <span class="text-darken-2 card-title">Gold Price</span>
                             <hr />
                             <p id="goldText"></p>
                             <span>Updated:</span>
                             <span id='goldTimeText'></span>
-                            <a class="waves-effect waves-light grey lighten-1 btn">button</a>
                         </div>
-                        <div id='goldGraph' class="flip-card-back ct-chart card">
-                            
-                        </div>
+                        <div id='goldGraph' class="flip-card-back ct-chart card"></div>
                     </div>
             </div>
 
@@ -43,9 +40,7 @@
                             <span>Updated:</span>
                             <span id='silverTimeText'></span>
                         </div>
-                        <div class="flip-card-back">
-                            graph here
-                        </div>
+                        <div id='silverGraph' class="flip-card-back ct-chart card"></div>
                     </div>
                 </div>
             </div>
@@ -60,9 +55,7 @@
                             <span>Updated:</span>
                             <span id='platinumTimeText'></span>
                         </div>
-                        <div class="flip-card-back">
-                            graph here
-                        </div>
+                        <div id='platinumGraph' class="flip-card-back ct-chart card"></div>
                     </div>
                 </div>
             </div>
@@ -77,9 +70,7 @@
                             <span>Updated:</span>
                             <span id='palladiumTimeText'></span>
                         </div>
-                        <div class="flip-card-back">
-                            graph here
-                        </div>
+                        <div id='palladiumGraph' class="flip-card-back ct-chart card"></div>
                     </div>
                 </div>
             </div>
@@ -268,7 +259,6 @@
         var palladiumTimeText = $("#palladiumTimeText");
     </script>
     <script>
-        newGraph('#goldGraph',[0,5,2,10])
     </script>
 </body>
 
