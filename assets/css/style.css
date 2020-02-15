@@ -1,3 +1,4 @@
+
 .card-title {
   text-align: center;
   color: #1f3d0c;
@@ -27,6 +28,8 @@ body {
 
 .card-content {
   color: #1f3d0c;
+  font-weight: bold;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png");
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -69,6 +72,7 @@ body {
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #d2b48c;
+  color: black;
 }
 
 /* Style the back side */
