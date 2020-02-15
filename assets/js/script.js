@@ -1,42 +1,70 @@
 var liveRates = new JSON({
-  url: "https://www.live-rates.com/rates",
-  api: "?key=" + "bc6cdd4bb0",
-  result: function(response) {
-    $(response).each(function(data) {
-      var price = formatCurrency(response[data].rate);
-      var timeSince = moment(parseInt(response[data].timestamp)).calendar();
-      if (response[data].currency == "GOLD") {
-        goldText.html(price);
-        goldTimeText.html(timeSince);
-      } else if (response[data].currency == "SILVER") {
-        silverText.html(price);
-        silverTimeText.html(timeSince);
-      } else if (response[data].currency == "PLATINUM") {
-        platinumText.html(price);
-        platinumTimeText.html(timeSince);
-      } else if (response[data].currency == "PALLADIUM") {
-        palladiumText.html(price);
-        palladiumTimeText.html(timeSince);
-      }
-    });
-  }
+    url: "https://www.live-rates.com/rates",
+    api: "?key=" + "bc6cdd4bb0",
+    result: function (response) {
+        $(response).each(function (data) {
+            var price = formatCurrency(response[data].rate);
+            var timeSince = moment(parseInt(response[data].timestamp)).calendar();
+            if (response[data].currency == "GOLD") {
+                goldText.html(price);
+                goldTimeText.html(timeSince);
+            } else if (response[data].currency == "SILVER") {
+                silverText.html(price);
+                silverTimeText.html(timeSince);
+            } else if (response[data].currency == "PLATINUM") {
+                platinumText.html(price);
+                platinumTimeText.html(timeSince);
+            } else if (response[data].currency == "PALLADIUM") {
+                palladiumText.html(price);
+                palladiumTimeText.html(timeSince);
+            }
+        });
+    }
 });
-
-// var alphavantage = new JSON(
-//         {
-//             url : "https://finnhub.io/api/v1/forex/candle",
-//             api : "?token=" + "bovg3ufrh5r90eafk9s0",
-//             query : "&symbol=OANDA:XAU_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
-//             cors : true,
-//             result : function (response) {
-//                 $(response).each(function(i){
-//                     console.log(moment(parseInt(response.t[i] + "000")))
-//                 })
-//                 console.log(response)
-//             }
-//         }
-//     )
-
+new JSON(
+    {
+            url : "https://finnhub.io/api/v1/forex/candle",
+            api : "?token=" + "bovg3ufrh5r90eafk9s0",
+            query : "&symbol=OANDA:XAU_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+            cors : true,
+            result : function (response) {
+                newGraph('#goldGraph',response.c)
+            }
+        }
+    )
+new JSON(
+    {
+            url : "https://finnhub.io/api/v1/forex/candle",
+            api : "?token=" + "bovg3ufrh5r90eafk9s0",
+            query : "&symbol=OANDA:XAG_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+            cors : true,
+            result : function (response) {
+                newGraph('#silverGraph',response.c)
+            }
+        }
+    )
+new JSON(
+    {
+            url : "https://finnhub.io/api/v1/forex/candle",
+            api : "?token=" + "bovg3ufrh5r90eafk9s0",
+            query : "&symbol=OANDA:XPT_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+            cors : true,
+            result : function (response) {
+                newGraph('#platinumGraph',response.c)
+            }
+        }
+    )
+new JSON(
+    {
+            url : "https://finnhub.io/api/v1/forex/candle",
+            api : "?token=" + "bovg3ufrh5r90eafk9s0",
+            query : "&symbol=OANDA:XPD_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+            cors : true,
+            result : function (response) {
+                newGraph('#palladiumGraph',response.c)
+            }
+        }
+    )
 // var alphavantage = new JSON(
 //     {
 //         url : "https://api.worldtradingdata.com/api/v1/forex",

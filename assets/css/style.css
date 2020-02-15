@@ -24,13 +24,25 @@ body {
 *:after {
   color: #654321;
 }
+.title {
 
-.card-content {
+  font-weight: bolder;
+  font-size: xx-large;
   color: #1f3d0c;
-  font-weight: bold;
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png");
+  text-align: center;
 }
-
+.card-title {
+  /* background-color: bisque; */
+  
+  
+  /* background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/what-the-hex.png"); */
+}
+.side, .card {
+  
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  background-color: #d2b48c;
+  color: #57471e;
+}
 .flipCard {
   -webkit-perspective: 800;
   -ms-perspective: 800;
@@ -74,7 +86,6 @@ body {
   -ms-backface-visibility: hidden; /* Internet Explorer */
   -o-backface-visibility: hidden; /* Opera */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  overflow: auto;
 }
 .flipCard .card .back {
   transform: rotatey(-180deg);
@@ -93,8 +104,12 @@ body {
   font-family: Georgia;
   font-size: 2em;
 }
-.card {
-  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
-  background-color: #d2b48c;
-  color: #57471e;
+.ct-chart {
+  background-color: #bbb;
+  max-width:100%;
+  max-height:100%;
+  padding: 0;
+  margin: 0;
+  z-index: 5;
+  /* background-color: rgba(0,0,0,0); */
 }

@@ -34,14 +34,14 @@
           <div class="flipCard">
             <div class="card" onclick="this.classList.toggle('flipped')" ;>
               <div class="side front">
-                <span class="text-darken-2 card-title">Gold Price</span>
+                <span class="text-darken-2 title">Gold Price</span>
                 <hr />
                 <p id="goldText"></p>
                 <span>Updated:</span>
                 <span id="goldTimeText"></span>
               </div>
               <div class="side back">
-                graph here
+                <div id="goldGraph"></div>
               </div>
             </div>
           </div>
@@ -50,14 +50,14 @@
           <div class="flipCard">
             <div class="card" onclick="this.classList.toggle('flipped')" ;>
               <div class="side front">
-                <span class="text-darken-2 card-title">Silver Price</span>
+                <span class="text-darken-2 title">Silver Price</span>
                 <hr />
                 <p id="silverText"></p>
                 <span>Updated:</span>
                 <span id="silverTimeText"></span>
               </div>
               <div class="side back">
-                graph here
+                <div id="silverGraph"></div>
               </div>
             </div>
           </div>
@@ -67,14 +67,14 @@
           <div class="flipCard">
             <div class="card" onclick="this.classList.toggle('flipped')" ;>
               <div class="side front">
-                <span class="text-darken-2 card-title">Platinum Price</span>
+                <span class="text-darken-2 title">Platinum Price</span>
                 <hr />
                 <p id="platinumText"></p>
                 <span>Updated:</span>
                 <span id="platinumTimeText"></span>
               </div>
               <div class="side back">
-                graph here
+                <div id="platinumGraph"></div>
               </div>
             </div>
           </div>
@@ -83,14 +83,14 @@
           <div class="flipCard">
             <div class="card" onclick="this.classList.toggle('flipped')" ;>
               <div class="side front">
-                <span class="text-darken-2 card-title">Palladium Price</span>
+                <span class="text-darken-2 title">Palladium Price</span>
                 <hr />
                 <p id="palladiumText"></p>
                 <span>Updated:</span>
                 <span id="palladiumTimeText"></span>
               </div>
               <div class="side back">
-                graph here
+                <div id="palladiumGraph"></div>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
           <div class="col s3">
             <div class="card">
               <div class="card-content">
-                <span class="text-darken-2 card-title">Weight</span>
+                <span class="text-darken-2 title">Weight</span>
               </div>
               <div class="card-action">
                 <input id="weight" value="1" name="weight" size="6" />
@@ -107,7 +107,7 @@
             </div>
             <div class="card">
               <div class="card-content">
-                <span class="text-darken-2 card-title">Units</span>
+                <span class="text-darken-2 title">Units</span>
               </div>
 
               <div class="card-action">
@@ -149,7 +149,7 @@
               <div class="row medium-collapse">
                 <div class="col s3">
                   <div class="card-content">
-                    <span class="text-darken-2 card-title">Gold</span>
+                    <span class="text-darken-2 title">Gold</span>
                   </div>
                   <div class="card-action">
                     <p>
@@ -192,7 +192,7 @@
                 </div>
                 <div class="col s3">
                   <div class="card-content">
-                    <span class="text-darken-2 card-title">Silver</span>
+                    <span class="text-darken-2 title">Silver</span>
                   </div>
                   <div class="card-action">
                     <p>
@@ -217,7 +217,7 @@
                 </div>
                 <div class="col s3">
                   <div class="card-content">
-                    <span class="text-darken-2 card-title">Platinum</span>
+                    <span class="text-darken-2 title">Platinum</span>
                   </div>
                   <div class="card-action">
                     <p>
@@ -230,7 +230,7 @@
                 </div>
                 <div class="col s3">
                   <div class="card-content">
-                    <span class="text-darken-2 card-title">Palladium</span>
+                    <span class="text-darken-2 title">Palladium</span>
                   </div>
                   <div class="card-action">
                     <p>
@@ -247,7 +247,7 @@
           <div class="col s9">
             <div class="card">
               <div class="card-content">
-                <span id="thevalue" class="text-darken-2 card-title"
+                <span id="thevalue" class="text-darken-2 title"
                   >$0.00</span
                 >
               </div>
@@ -257,7 +257,7 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/chartist/chartist.min.js"></script>
+    <script src="assets/chartist/chartist.js"></script>
     <script src="assets/js/chartist.js"></script>
     <script src="assets/js/currency.js"></script>
     <script src="assets/js/calculator.js"></script>
