@@ -19,23 +19,23 @@ function figureThis() {
     if (selection[i].checked == true) var metal = Number(selection[i].value);
   }
   if (metal <= 5 && metal >= 0) {
-    var price = 1568.51
+    var price = $('#goldText').html()
   }
   else if (metal <= 8 && metal >=6) {
-    // var price = parseFloat($('#silverText').html())
-    var price = 17.55;
+    var price = $('#silverText').html()
   }
   else if (metal == 9) {
-    var price = 972.00;
+    var price = $('#platinumText').html()
   }
   else if (metal == 10) {
-    var price = 2262.10;
+    var price = $('#palladiumText').html()
   }
-  if (units == 1) troy = weight * 0.03215075;
-  else if (units == 2) troy = weight * 14.583;
-  else if (units == 3) troy = weight * 0.05;
-  else if (units == 4) troy = weight;
-  else if (units == 5) troy = weight * 0.9114375;
+  price = Number(price.replace(/[^0-9.-]+/g,""))
+  if (units == 0) troy = weight * 0.03215075;
+  else if (units == 1) troy = weight * 14.583;
+  else if (units == 2) troy = weight * 0.05;
+  else if (units == 3) troy = weight;
+  else if (units == 4) troy = weight * 0.9114375;
 
   troyper = new Array(
     0.375,

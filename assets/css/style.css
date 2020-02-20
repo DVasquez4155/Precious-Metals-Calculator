@@ -11,7 +11,7 @@ body {
     background-color: lightgoldenrodyellow;
 } */
 
-.card-action {
+.card-action,p,span {
   color: #654321;
   font-weight: bold;
 }
@@ -27,7 +27,7 @@ body {
 .title {
 
   font-weight: bolder;
-  font-size: xx-large;
+  font-size: x-large;
   color: #1f3d0c;
   text-align: center;
 }
@@ -48,9 +48,9 @@ body {
   -ms-perspective: 800;
   -moz-perspective: 800;
   -o-perspective: 800;
-  height: 200px;
+  height: 160px;
   position: relative;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 .flipCard .card.flipped {
   transform: rotatey(-180deg);
@@ -100,7 +100,6 @@ body {
 }
 .flipCard .card .back {
   text-align: center;
-  padding-top: 50px;
   font-family: Georgia;
   font-size: 2em;
 }
