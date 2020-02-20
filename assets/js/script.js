@@ -1,7 +1,12 @@
+$('#calculator').submit(function () {
+    return false;
+});
+
 var liveRates = new JSON({
     url: "https://www.live-rates.com/rates",
-    api: "?key=" + "bc6cdd4bb0",
+    api: "?key=" + "324f4ae9a5",
     result: function (response) {
+        console.log(response)
         $(response).each(function (data) {
             var price = formatCurrency(response[data].rate);
             var timeSince = moment(parseInt(response[data].timestamp)).calendar();
@@ -21,50 +26,54 @@ var liveRates = new JSON({
         });
     }
 });
-new JSON(
-    {
-            url : "https://finnhub.io/api/v1/forex/candle",
-            api : "?token=" + "bovg3ufrh5r90eafk9s0",
-            query : "&symbol=OANDA:XAU_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
-            cors : true,
-            result : function (response) {
-                newGraph('#goldGraph',response.c)
+newGraphs()
+function newGraphs() {
+    new JSON(
+        {
+                url : "https://finnhub.io/api/v1/forex/candle",
+                api : "?token=" + "bovg3ufrh5r90eafk9s0",
+                query : "&symbol=OANDA:XAU_USD&resolution=5" + "&from="  + moment().subtract(1, 'day').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+                cors : true,
+                result : function (response) {
+                    newGraph('#goldGraph',response.c, response.t)
+                }
             }
-        }
-    )
-new JSON(
-    {
-            url : "https://finnhub.io/api/v1/forex/candle",
-            api : "?token=" + "bovg3ufrh5r90eafk9s0",
-            query : "&symbol=OANDA:XAG_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
-            cors : true,
-            result : function (response) {
-                newGraph('#silverGraph',response.c)
+        )
+    new JSON(
+        {
+                url : "https://finnhub.io/api/v1/forex/candle",
+                api : "?token=" + "bovg3ufrh5r90eafk9s0",
+                query : "&symbol=OANDA:XAG_USD&resolution=5" + "&from="  + moment().subtract(1, 'day').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+                cors : true,
+                result : function (response) {
+                    newGraph('#silverGraph',response.c, response.t)
+                }
             }
-        }
-    )
-new JSON(
-    {
-            url : "https://finnhub.io/api/v1/forex/candle",
-            api : "?token=" + "bovg3ufrh5r90eafk9s0",
-            query : "&symbol=OANDA:XPT_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
-            cors : true,
-            result : function (response) {
-                newGraph('#platinumGraph',response.c)
+        )
+    new JSON(
+        {
+                url : "https://finnhub.io/api/v1/forex/candle",
+                api : "?token=" + "bovg3ufrh5r90eafk9s0",
+                query : "&symbol=OANDA:XPT_USD&resolution=5" + "&from="  + moment().subtract(1, 'day').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+                cors : true,
+                result : function (response) {
+                    newGraph('#platinumGraph',response.c, response.t)
+                }
             }
-        }
-    )
-new JSON(
-    {
-            url : "https://finnhub.io/api/v1/forex/candle",
-            api : "?token=" + "bovg3ufrh5r90eafk9s0",
-            query : "&symbol=OANDA:XPD_USD&resolution=D" + "&from="  + moment().subtract(1, 'month').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
-            cors : true,
-            result : function (response) {
-                newGraph('#palladiumGraph',response.c)
+        )
+    new JSON(
+        {
+                url : "https://finnhub.io/api/v1/forex/candle",
+                api : "?token=" + "bovg3ufrh5r90eafk9s0",
+                query : "&symbol=OANDA:XPD_USD&resolution=5" + "&from="  + moment().subtract(1, 'day').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+                cors : true,
+                result : function (response) {
+                    newGraph('#palladiumGraph',response.c, response.t)
+                    // console.log(response.t)
+                }
             }
-        }
-    )
+        )
+}
 // var alphavantage = new JSON(
 //     {
 //         url : "https://api.worldtradingdata.com/api/v1/forex",

@@ -95,49 +95,46 @@
             </div>
           </div>
         </div>
-        <form name="calculator">
+        <form id='calculator' name="calculator">
           <div class="col s3">
             <div class="card">
               <div class="card-content">
                 <span class="text-darken-2 title">Weight</span>
-              </div>
-              <div class="card-action">
-                <input id="weight" value="1" name="weight" size="6" />
+                <hr />
+                  <input id="weight" value="1" name="weight" size="6" type="number" class="validate">
               </div>
             </div>
             <div class="card">
               <div class="card-content">
                 <span class="text-darken-2 title">Units</span>
-              </div>
-
-              <div class="card-action">
+                <hr />
                 <p>
                   <label>
-                    <input name="units" type="radio" checked value="1" />
+                    <input name="units" type="radio" checked value="0" />
                     <span for="units">Gram</span>
                   </label>
                 </p>
                 <p>
                   <label>
-                    <input name="units" type="radio" value="2" />
+                    <input name="units" type="radio" value="1" />
                     <span>Pounds</span>
                   </label>
                 </p>
                 <p>
                   <label>
-                    <input name="units" type="radio" value="3" />
-                    <span>Dwt</span>
+                    <input name="units" type="radio" value="2" />
+                    <span>Dwt (Pennyweight)</span>
                   </label>
                 </p>
                 <p>
                   <label>
-                    <input name="units" type="radio" value="4" />
+                    <input name="units" type="radio" value="3" />
                     <span>Troy Ounce</span>
                   </label>
                 </p>
                 <p>
                   <label>
-                    <input name="units" type="radio" value="5" />
+                    <input name="units" type="radio" value="4" />
                     <span>Av Ounce</span>
                   </label>
                 </p>
@@ -150,8 +147,7 @@
                 <div class="col s3">
                   <div class="card-content">
                     <span class="text-darken-2 title">Gold</span>
-                  </div>
-                  <div class="card-action">
+                    <hr />
                     <p>
                       <label>
                         <input name="metal" type="radio" checked value="0" />
@@ -193,8 +189,7 @@
                 <div class="col s3">
                   <div class="card-content">
                     <span class="text-darken-2 title">Silver</span>
-                  </div>
-                  <div class="card-action">
+                    <hr />
                     <p>
                       <label>
                         <input name="metal" type="radio" value="6" />
@@ -218,8 +213,7 @@
                 <div class="col s3">
                   <div class="card-content">
                     <span class="text-darken-2 title">Platinum</span>
-                  </div>
-                  <div class="card-action">
+                    <hr />
                     <p>
                       <label>
                         <input name="metal" type="radio" value="9" />
@@ -231,8 +225,7 @@
                 <div class="col s3">
                   <div class="card-content">
                     <span class="text-darken-2 title">Palladium</span>
-                  </div>
-                  <div class="card-action">
+                    <hr />
                     <p>
                       <label>
                         <input name="metal" type="radio" value="10" />
