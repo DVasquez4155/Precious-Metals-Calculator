@@ -1,29 +1,53 @@
 $('#calculator').submit(function () {
     return false;
 });
-
-var liveRates = new JSON({
-    url: "https://www.live-rates.com/rates",
-    api: "?key=" + "324f4ae9a5",
-    result: function (response) {
-        console.log(response)
-        $(response).each(function (data) {
-            var price = formatCurrency(response[data].rate);
-            var timeSince = moment(parseInt(response[data].timestamp)).calendar();
-            if (response[data].currency == "GOLD") {
-                goldText.html(price);
-                goldTimeText.html(timeSince);
-            } else if (response[data].currency == "SILVER") {
-                silverText.html(price);
-                silverTimeText.html(timeSince);
-            } else if (response[data].currency == "PLATINUM") {
-                platinumText.html(price);
-                platinumTimeText.html(timeSince);
-            } else if (response[data].currency == "PALLADIUM") {
-                palladiumText.html(price);
-                palladiumTimeText.html(timeSince);
-            }
-        });
+const us = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+})
+new JSON({
+    url: "https://finnhub.io/api/v1/forex/candle",
+    api: "?token=" + "bovg3ufrh5r90eafk9s0",
+    query : "&symbol=OANDA:XAU_USD&resolution=1" + "&from="  + moment().subtract(5, 'minutes').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+    cors : true,
+    result : function (response) {
+        var latestLength = response.t.length - 1;
+        goldText.html(us.format(response.o[latestLength]));
+        goldTimeText.html(moment(parseInt(response.t[latestLength] + "000")).calendar());
+    }
+});
+new JSON({
+    url: "https://finnhub.io/api/v1/forex/candle",
+    api: "?token=" + "bovg3ufrh5r90eafk9s0",
+    query : "&symbol=OANDA:XAG_USD&resolution=1" + "&from="  + moment().subtract(5, 'minutes').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+    cors : true,
+    result : function (response) {
+        var latestLength = response.t.length - 1;
+        silverText.html(us.format(response.o[latestLength]));
+        silverTimeText.html(moment(parseInt(response.t[latestLength] + "000")).calendar());
+    }
+});
+new JSON({
+    url: "https://finnhub.io/api/v1/forex/candle",
+    api: "?token=" + "bovg3ufrh5r90eafk9s0",
+    query : "&symbol=OANDA:XPT_USD&resolution=1" + "&from="  + moment().subtract(5, 'minutes').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+    cors : true,
+    result : function (response) {
+        var latestLength = response.t.length - 1;
+        platinumText.html(us.format(response.o[latestLength]));
+        platinumTimeText.html(moment(parseInt(response.t[latestLength] + "000")).calendar());
+    }
+});
+new JSON({
+    url: "https://finnhub.io/api/v1/forex/candle",
+    api: "?token=" + "bovg3ufrh5r90eafk9s0",
+    query : "&symbol=OANDA:XPD_USD&resolution=1" + "&from="  + moment().subtract(5, 'minutes').format('x').substring(0,10) + "&to="  + moment().format('x').substring(0,10),
+    cors : true,
+    result : function (response) {
+        var latestLength = response.t.length - 1;
+        palladiumText.html(us.format(response.o[latestLength]));
+        palladiumTimeText.html(moment(parseInt(response.t[latestLength] + "000")).calendar());
     }
 });
 newGraphs()
